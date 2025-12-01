@@ -25,7 +25,7 @@ paste of large tables gets very messy.
 
 ```R
 ## Figure 1
-pdf("inst/tables_and_figures/figure1.pdf",
+pdf("tables_and_figures/figure1.pdf",
     height = 12, width = 8,
     timestamp = FALSE)
 EFSAMRSAsummary::figure1()

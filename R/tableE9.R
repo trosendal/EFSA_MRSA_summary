@@ -68,9 +68,8 @@ tableE9 <- function(df_AMR = read_AMR(),
         `LA, CA or HA`,
         `Inferred ST/CC & type`
     )]
-    write.csv2(tab,
+    write.csv2(tab1_dt,
                file = path_csv,
-               row.names = FALSE,
-               quote = TRUE)
+               row.names = FALSE)
     path_csv
 }
