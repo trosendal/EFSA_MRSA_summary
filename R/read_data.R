@@ -15,7 +15,7 @@
 ##' @param path The local file path to the excel file
 ##' @param years The years to be included in the filtered data
 ##' @return a data.table object
-##' @importFrom read_xlsx readxl
+##' @importFrom readxl read_xlsx
 ##' @import data.table
 read_prev <- function(path = "inst/extdata/prevalence MRSA all data.xlsx",
                       years = c("2023", "2024")) {

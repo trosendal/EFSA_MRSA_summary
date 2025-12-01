@@ -21,6 +21,16 @@ the web-based Microsoft word to another file works fine, at least when
 track changes to turned off. If track changes are enabled then copy
 paste of large tables gets very messy.
 
+## Usage
+
+```R
+pdf("tables_and_figures/figure1.pdf",
+    height = 12, width = 8,
+    timestamp = FALSE)
+figure1()
+dev.off()
+```
+
 ## Future development
 ### Write word tables directly
 It would be better to write the  Microsoft word tables directly from
