@@ -12,8 +12,10 @@
 tableE2 <- function(df_prev = read_prev(),
                     year =  2023,
                     path_csv = tempfile(fileext = ".csv")) {
+    env <- environment()
     stopifnot(identical(length(year), 1L))
-    tab1 <- df_prev[year == year & source == "food",
+    tab1 <- df_prev[year == get("year", envir = env) &
+                    source == "food",
                     .(N = sum(N), n = sum(n), prop = sum(n) / sum (N)),
                     by = .(type = matrix,
                            country = country,

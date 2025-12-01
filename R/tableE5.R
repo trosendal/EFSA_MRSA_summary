@@ -12,11 +12,12 @@
 tableE5 <- function(df_prev = read_prev(),
                     year =  2024,
                     path_csv = tempfile(fileext = ".csv")) {
+    env <- environment()
     stopifnot(identical(length(year), 1L))
     nonfood <- c("Dogs", "Felidae", "Solipeds, domestic",
                  "Land game mammals")
     tab1 <- df_prev[source == "animal" &
-                    year == year &
+                    year == get("year", envir = env) &
                     SAMPCONTEXT == "Clinical investigations" &
                     !(matrix %in% nonfood),
                     .(N = sum(N), n = sum(n), prop = sum(n) / sum(N)),
