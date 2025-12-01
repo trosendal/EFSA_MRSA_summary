@@ -24,18 +24,24 @@ paste of large tables gets very messy.
 ## Usage
 
 ```R
+## Figure 1
 pdf("inst/tables_and_figures/figure1.pdf",
     height = 12, width = 8,
     timestamp = FALSE)
 EFSAMRSAsummary::figure1()
 dev.off()
 
+## Figure 2
 pdf("tables_and_figures/figure2.pdf",
     height = 12,
     width = 8,
     timestamp = FALSE)
 EFSAMRSAsummary::figure2()
 dev.off()
+
+## Table 1
+EFSAMRSAsummary::table1(path_csv = "tables_and_figures/table1.csv")
+
 ```
 
 ## Future development
