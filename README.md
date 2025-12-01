@@ -42,6 +42,10 @@ dev.off()
 ## Table 1
 EFSAMRSAsummary::table1(path_csv = "tables_and_figures/table1.csv")
 
+## Table 2
+EFSAMRSAsummary::table2(path_csv = "tables_and_figures/table2.csv")
+
+
 ```
 
 ## Future development
