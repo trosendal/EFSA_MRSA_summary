@@ -48,7 +48,8 @@ EFSAMRSAsummary::table2(path_csv = "tables_and_figures/table2.csv")
 ## Table 3 (Not in actual chapter)
 EFSAMRSAsummary::table3(path_csv = "tables_and_figures/table3.csv")
 
-
+## Table E1
+EFSAMRSAsummary::tableE1(path_csv = "tables_and_figures/MRSA_AnnexE_tableE1_new.csv")
 ```
 
 ## Future development
