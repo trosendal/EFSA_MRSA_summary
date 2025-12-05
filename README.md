@@ -36,14 +36,14 @@ if (!dir.exists("output")) {
     dir.create("output")
 }
 ## Figure 1
-pdf("tables_and_figures/figure1.pdf",
+pdf("output/figure1.pdf",
     height = 12, width = 8,
     timestamp = FALSE)
 EFSAMRSAsummary::figure1()
 dev.off()
 
 ## Figure 2
-pdf("tables_and_figures/figure2.pdf",
+pdf("output/figure2.pdf",
     height = 12,
     width = 8,
     timestamp = FALSE)
@@ -51,49 +51,49 @@ EFSAMRSAsummary::figure2()
 dev.off()
 
 ## Table 1
-EFSAMRSAsummary::table1(path_csv = "tables_and_figures/table1.csv")
+EFSAMRSAsummary::table1(path_csv = "output/table1.csv")
 
 ## Table 2
-EFSAMRSAsummary::table2(path_csv = "tables_and_figures/table2.csv")
+EFSAMRSAsummary::table2(path_csv = "output/table2.csv")
 
 ## Table 3 (Not in actual chapter)
-EFSAMRSAsummary::table3(path_csv = "tables_and_figures/table3.csv")
+EFSAMRSAsummary::table3(path_csv = "output/table3.csv")
 
 ## Table E1
-EFSAMRSAsummary::tableE1(path_csv = "tables_and_figures/MRSA_AnnexE_tableE1_new.csv")
+EFSAMRSAsummary::tableE1(path_csv = "output/MRSA_AnnexE_tableE1_new.csv")
 
 ## Table E2
-EFSAMRSAsummary::tableE2(path_csv = "tables_and_figures/MRSA_AnnexE_tableE2_new.csv")
+EFSAMRSAsummary::tableE2(path_csv = "output/MRSA_AnnexE_tableE2_new.csv")
 
 ## Table E3
-EFSAMRSAsummary::tableE3(path_csv = "tables_and_figures/MRSA_AnnexE_tableE3_new.csv")
+EFSAMRSAsummary::tableE3(path_csv = "output/MRSA_AnnexE_tableE3_new.csv")
 
 ## Table E4
-EFSAMRSAsummary::tableE4(path_csv = "tables_and_figures/MRSA_AnnexE_tableE4_new.csv")
+EFSAMRSAsummary::tableE4(path_csv = "output/MRSA_AnnexE_tableE4_new.csv")
 
 ## Table E5
-EFSAMRSAsummary::tableE5(path_csv = "tables_and_figures/MRSA_AnnexE_tableE5_new.csv")
+EFSAMRSAsummary::tableE5(path_csv = "output/MRSA_AnnexE_tableE5_new.csv")
 
 ## Table E6
-EFSAMRSAsummary::tableE6(path_csv = "tables_and_figures/MRSA_AnnexE_tableE6_new.csv")
+EFSAMRSAsummary::tableE6(path_csv = "output/MRSA_AnnexE_tableE6_new.csv")
 
 ## Table E7
-EFSAMRSAsummary::tableE7(path_csv = "tables_and_figures/MRSA_AnnexE_tableE7_new.csv")
+EFSAMRSAsummary::tableE7(path_csv = "output/MRSA_AnnexE_tableE7_new.csv")
 
 ## Table E8
-EFSAMRSAsummary::tableE8(path_csv = "tables_and_figures/MRSA_AnnexE_tableE8.csv")
+EFSAMRSAsummary::tableE8(path_csv = "output/MRSA_AnnexE_tableE8.csv")
 
 ## Table E9
-EFSAMRSAsummary::tableE9(path_csv = "tables_and_figures/MRSA_AnnexE_tableE9.csv")
+EFSAMRSAsummary::tableE9(path_csv = "output/MRSA_AnnexE_tableE9.csv")
 
 ## Table E10
-EFSAMRSAsummary::tableE10(path_csv = "tables_and_figures/MRSA_AnnexE_tableE10.csv")
+EFSAMRSAsummary::tableE10(path_csv = "output/MRSA_AnnexE_tableE10.csv")
 
 ## Table E12
-EFSAMRSAsummary::tableE12(path_csv = "tables_and_figures/MRSA_AnnexE_tableE12.csv")
+EFSAMRSAsummary::tableE12(path_csv = "output/MRSA_AnnexE_tableE12.csv")
 
 ## Table E13
-EFSAMRSAsummary::tableE13(path_csv = "tables_and_figures/MRSA_AnnexE_tableE13.csv")
+EFSAMRSAsummary::tableE13(path_csv = "output/MRSA_AnnexE_tableE13.csv")
 ```
 
 ## Future development
