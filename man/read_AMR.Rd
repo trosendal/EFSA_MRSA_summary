@@ -5,7 +5,7 @@
 \title{read_AMR}
 \usage{
 read_AMR(
-  path = "inst/extdata/MRSA AMR 2023-2024.xlsx",
+  path = isolate_file(),
   sheet = "QUERY_FOR_FULL_AMR_ISOL_DAT_000",
   EUvet = c(Cefoxitin = "C", Chloramphenicol = "C", Ciprofloxacin = "B", Clindamycin =
     "C", Erythromycin = "C", `Fusidic acid` = "D", Gentamicin = "C", Kanamycin = "C",

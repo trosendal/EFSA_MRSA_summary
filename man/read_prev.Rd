@@ -4,10 +4,7 @@
 \alias{read_prev}
 \title{read_prev}
 \usage{
-read_prev(
-  path = "inst/extdata/prevalence MRSA all data.xlsx",
-  years = c("2023", "2024")
-)
+read_prev(path = prev_file(), years = c("2023", "2024"))
 }
 \arguments{
 \item{path}{The local file path to the excel file}

@@ -25,3 +25,20 @@ Produce Annex E Table 3: Methicillin-resistant Staphylococcus
 aureus in food-producing animals, clinical investigations
 excluded, 2024.
 }
+\details{
+In microstrategy the following query string was provided:
+
+({Zoonosis context (L2)} = Methicillin resistant Staphylococcus aureus (MRSA):S. aureus, meticillin resistant (MRSA)) And
+({Reporting year} = 2024) And
+({Reporting year} (ADJUSTED_ID) >= {ValidFrom (Country status history)} (ID)) And
+({Reporting year} (ADJUSTED_ID) <= {ValidTo (Country status history)} (ID)) And
+({Sampling strategy} <> 3:Suspect sampling) And
+({Sampling context context (L1)} <> Clinical investigations) And
+(({Sample type context (L1)} = animal sample) Or
+    ({Sample unit context prevalence (LAST)} = animal, herd/flock, holding, slaughter animal batch) Or
+    ({Matrix context (L3)} (SPECIESTYPE) = "animal")) And
+(Snapshot (ID) = 0) And
+({Validity attribute} = VALID) And
+({National level context} = 1) Or
+({Country (Country status history)} = 258:XI:United Kingdom (Northern Ireland):, 259:XU:United Kingdom (excluding Northern Ireland):, 257:XK:Kosovo:Kosovo)
+}
