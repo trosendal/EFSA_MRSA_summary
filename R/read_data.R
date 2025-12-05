@@ -1,3 +1,23 @@
+##' prev_file
+##'
+##' Get the path to the packages data on prevalence
+##'
+##' @return A path
+prev_file <- function() {
+    system.file("extdata/prevalence MRSA all data.xlsx",
+                package = "EFSAMRSAsummary")
+}
+
+##' isolate_file
+##'
+##' Get the path to the packaged data on isolates
+##'
+##' @return A path
+isolate_file <- function() {
+    system.file("extdata/MRSA AMR 2023-2024.xlsx",
+                package = "EFSAMRSAsummary")
+}
+
 ##' read_prev
 ##'
 ##' A function that reads the MRSA prevalence data reported by member
@@ -18,7 +38,7 @@
 ##' @importFrom readxl read_xlsx
 ##' @export
 ##' @import data.table
-read_prev <- function(path = "inst/extdata/prevalence MRSA all data.xlsx",
+read_prev <- function(path = prev_file(),
                       years = c("2023", "2024")) {
 
     ## Read in the prevalence data for MRSA from all years. The column
@@ -125,7 +145,7 @@ read_prev <- function(path = "inst/extdata/prevalence MRSA all data.xlsx",
 ##' @import data.table
 ##' @return A data.table object
 ##' @export
-read_AMR <- function(path = "inst/extdata/MRSA AMR 2023-2024.xlsx",
+read_AMR <- function(path = isolate_file(),
                      sheet = "QUERY_FOR_FULL_AMR_ISOL_DAT_000",
                      EUvet =
                          c("Cefoxitin" = "C", ## with the Cephalosporins
