@@ -1,0 +1,6 @@
+"Animal";"Country";"Production type";"Sample unit";"Units tested";"Positive for MRSA (%)"
+"Dogs";"Netherlands";"Dogs - pet animals";"animal";7447;"10 (0.1%)"
+"Dogs";"Norway";"Dogs - pet animals";"animal";4;"0 (0%)"
+"Felidae";"Netherlands";"Cats - pet animals";"animal";2749;"5 (0.2%)"
+"Land game mammals";"Netherlands";"Land game mammals - zoo animals";"animal";470;"16 (3.4%)"
+"Solipeds, domestic";"Netherlands";"Solipeds, domestic - horses";"animal";928;"15 (1.6%)"

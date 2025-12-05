@@ -1,0 +1,6 @@
+"Animal";"Country";"Production type";"Sample unit";"Units tested";"Positive for MRSA (%)"
+"Pigs";"Italy";"Pigs";"animal";1;"1 (100%)"
+"Pigs";"Netherlands";"Pigs - unspecified";"animal";20;"2 (10%)"
+"Pigs";"Norway";"Pigs - mixed herds";"animal";3;"0 (0%)"
+"Pigs";"Norway";"Pigs - mixed herds";"herd/flock";2;"0 (0%)"
+"Small ruminants";"Netherlands";"Goats";"animal";7;"1 (14.3%)"
