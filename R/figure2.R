@@ -10,8 +10,9 @@
 figure2 <- function(df_prev = read_prev(),
                     years =  c(2023, 2024)) {
     nonfood <- c("Dogs", "Felidae", "Solipeds, domestic")
-    tab1 <- df_prev[year %in% c(2023, 2024) &
+    tab1 <- df_prev[year %in% years &
                     source == "animal" &
+                    ## !(SAMPCONTEXT %in% c("Clinical investigations", "Outbreak investigation")) &
                     !(matrix %in% nonfood),
                     .(N = sum(N), n = sum(n), prop = sum(n) / sum (N)),
                     by = .(year = year,

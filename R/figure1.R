@@ -13,7 +13,8 @@
 ##' @export
 figure1 <- function(df_prev = read_prev(),
                     years =  c(2023, 2024)) {
-    tab1 <- df_prev[year %in% years & source == "food",
+    tab1 <- df_prev[year %in% years &
+                    source == "food",
                     .(N = sum(N), n = sum(n), prop = sum(n) / sum (N)),
                     by = .(year = year,
                            type = matrix,
