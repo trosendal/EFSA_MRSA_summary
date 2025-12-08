@@ -359,6 +359,8 @@ collapse_AMR <- function(df_AMR) {
                               sampOrig = unique(sampOrig),
                               source = unique(speciesType),
                               matrix = unique(matrix_L1),
+                              totUnitsPositive = unique(totUnitsPositive),
+                              totUnitsTested = unique(totUnitsTested),
                               ST = as.numeric(unique(ST)),
                               CC = as.numeric(unique(CC)),
                               SPA = as.numeric(unique(T)),
