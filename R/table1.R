@@ -22,6 +22,31 @@ table1 <- function(spaprev = prev_by_SPA(),
                    path_csv = path_csv)
 }
 
+##' table2
+##'
+##' Table 2 - Other types that are not CC398
+##' Produce Table 2 in the main chapter
+##'
+##' @param spaprev The object from the prev_by_SPA() function
+##' @param path_csv path to the output csv file
+##' @import data.table
+##' @importFrom utils write.csv2
+##' @return A path to a csv file
+##' @export
+table2 <- function(spaprev = prev_by_SPA(),
+                   path_csv = tempfile(fileext = ".csv")) {
+
+    ## Sort for most common to least common across all types
+    sortorder <- spaprev[, sum(Total), by = .(SPA)][order(V1), SPA]
+
+    ## Just the CC398 spa types
+    df <- spaprev[!(CC %in% c("398", "CC1/CC398")) &
+                  !is.na(CC)]
+    df <- df[order(match(SPA, sortorder), Year, decreasing = TRUE)]
+    table123_inner(df,
+                   path_csv = path_csv)
+}
+
 ##' table123_inner
 ##'
 ##' @param df the subset of prev_by_SPA
