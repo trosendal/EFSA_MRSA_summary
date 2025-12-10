@@ -53,8 +53,7 @@ table123_inner <- function(df, path_csv) {
         animaltot2 <- Total[source == "animal" & Year == years[2]]
         animaltot2 <- ifelse(identical(animaltot2, numeric(0)), "", animaltot2)
 
-        data.frame(CC = rep(CC, 2),
-                   Year = as.numeric(years),
+        data.frame(Year = as.numeric(years),
                    animals = c(animal1, animal2),
                    animaltot = as.character(c(animaltot1, animaltot2)),
                    food = c(food1, food2),
@@ -67,7 +66,7 @@ table123_inner <- function(df, path_csv) {
     ## Drop completely empty rows
     df <- df[animals != "" | food != ""]
 
-    names(df) <- c("spa-type", "CC", "Year", "Animals (N)", "Total",
+    names(df) <- c("spa-type", "Year", "Animals (N)", "Total",
                    "Food (N)", "Total")
     write.csv2(df,
                file = path_csv,
