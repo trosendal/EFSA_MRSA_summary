@@ -142,13 +142,14 @@ prev_by_samplingID <- function(df_prev = read_prev()) {
 ##' @import data.table
 ##' @export
 prev_by_SPA <- function(df_prev = read_prev()) {
+    years <- sort(unique(df_year$REPYEAR))
     ## Aggregate by samplingID
     df_prev <- df_prev[!is.na(T), {
         n <- sum(as.numeric(UNITSPOSITIVE), na.rm = TRUE)
         stopifnot(all(!is.na(n)))
         .(n = n,
-          year = REPYEAR[1],
-          source = SPECIESTYPE[1],
+          year = factor(REPYEAR[1], levels = years),
+          source = factor(SPECIESTYPE[1], levels = c("animal", "food")),
           matrix = MATRIX_L1[1],
           CC = CC_infer)
     }, by = .(samplingID, SPA = T)]
