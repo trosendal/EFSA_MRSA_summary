@@ -8,6 +8,8 @@ table123_inner(df, path_csv)
 }
 \arguments{
 \item{df}{the subset of prev_by_SPA}
+
+\item{path_csv}{path to the csv file}
 }
 \value{
 A table

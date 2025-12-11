@@ -123,8 +123,10 @@ prev_by_samplingID <- function(df_prev = read_prev()) {
           SAMPCONTEXT = SAMPCONTEXT[1],
           year = REPYEAR[1],
           SPA = paste(T, collapse = ", "),
-          ST = paste(ST_infer, collapse = ", "),
-          CC = paste(CC_infer, collapse = ", "),
+          ST = paste(ST, collapse = ", "),
+          CC = paste(CC, collapse = ", "),
+          ST_infer = paste(ST_infer, collapse = ", "),
+          CC_infer = paste(CC_infer, collapse = ", "),
           source = SPECIESTYPE[1],
           matrix = MATRIX_L1[1],
           matrix_txt = MATRIX[1],
@@ -138,10 +140,12 @@ prev_by_samplingID <- function(df_prev = read_prev()) {
 ##' Aggregate by SPA type and only keep those that have a SPA type.
 ##'
 ##' @param df_prev the prevlance dataset
+##' @param inferCC should there be inference of the clonal complex from spa type?
 ##' @return An aggrigated dataset by SPA type
 ##' @import data.table
 ##' @export
-prev_by_SPA <- function(df_prev = read_prev()) {
+prev_by_SPA <- function(df_prev = read_prev(),
+                        inferCC = TRUE) {
     years <- sort(unique(df_prev$REPYEAR))
     ## Aggregate by samplingID
     df_prev <- df_prev[!is.na(T) &

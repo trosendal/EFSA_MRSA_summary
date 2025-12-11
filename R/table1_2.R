@@ -50,6 +50,7 @@ table2 <- function(spaprev = prev_by_SPA(),
 ##' table123_inner
 ##'
 ##' @param df the subset of prev_by_SPA
+##' @param path_csv path to the csv file
 ##' @return A table
 table123_inner <- function(df, path_csv) {
     df <- df[, {

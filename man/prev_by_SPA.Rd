@@ -4,10 +4,12 @@
 \alias{prev_by_SPA}
 \title{prev_by_SPA}
 \usage{
-prev_by_SPA(df_prev = read_prev())
+prev_by_SPA(df_prev = read_prev(), inferCC = TRUE)
 }
 \arguments{
 \item{df_prev}{the prevlance dataset}
+
+\item{inferCC}{should there be inference of the clonal complex from spa type?}
 }
 \value{
 An aggrigated dataset by SPA type
