@@ -9,7 +9,7 @@
 ##' @importFrom utils write.csv2
 ##' @return A path to a csv file
 ##' @export
-table1 <- function(spaprev = prev_by_SPA(),
+table1 <- function(spaprev = prev_by_SPA(inferCC = TRUE),
                    path_csv = tempfile(fileext = ".csv")) {
 
     ## Sort for most common to least common across all types
@@ -33,15 +33,40 @@ table1 <- function(spaprev = prev_by_SPA(),
 ##' @importFrom utils write.csv2
 ##' @return A path to a csv file
 ##' @export
-table2 <- function(spaprev = prev_by_SPA(),
+table2 <- function(spaprev = prev_by_SPA(inferCC = TRUE),
                    path_csv = tempfile(fileext = ".csv")) {
 
     ## Sort for most common to least common across all types
     sortorder <- spaprev[, sum(Total), by = .(SPA)][order(V1), SPA]
 
-    ## Just the CC398 spa types
+    ## Just the non CC398 spa types
     df <- spaprev[!(CC %in% c("398", "CC1/CC398")) &
                   !is.na(CC)]
+    df <- df[order(match(SPA, sortorder), Year, decreasing = TRUE)]
+    table123_inner(df,
+                   path_csv = path_csv)
+}
+
+##' table3
+##'
+##' Table 3 - Other types that are not CC classified Produce Table 3
+##' that is not in the main chapter but helps to understand where the
+##' missing data is.
+##'
+##' @param spaprev The object from the prev_by_SPA() function
+##' @param path_csv path to the output csv file
+##' @import data.table
+##' @importFrom utils write.csv2
+##' @return A path to a csv file
+##' @export
+table3 <- function(spaprev = prev_by_SPA(inferCC = TRUE),
+                   path_csv = tempfile(fileext = ".csv")) {
+
+    ## Sort for most common to least common across all types
+    sortorder <- spaprev[, sum(Total), by = .(SPA)][order(V1), SPA]
+
+    ## Just the missing CC spa types
+    df <- spaprev[is.na(CC)]
     df <- df[order(match(SPA, sortorder), Year, decreasing = TRUE)]
     table123_inner(df,
                    path_csv = path_csv)

@@ -4,7 +4,10 @@
 \alias{table2}
 \title{table2}
 \usage{
-table2(spaprev = prev_by_SPA(), path_csv = tempfile(fileext = ".csv"))
+table2(
+  spaprev = prev_by_SPA(inferCC = FALSE),
+  path_csv = tempfile(fileext = ".csv")
+)
 }
 \arguments{
 \item{spaprev}{The object from the prev_by_SPA() function}
