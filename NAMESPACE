@@ -3,6 +3,7 @@
 export(collapse_AMR)
 export(figure1)
 export(figure2)
+export(figure3)
 export(host_association)
 export(prev_by_SPA)
 export(prev_by_samplingID)

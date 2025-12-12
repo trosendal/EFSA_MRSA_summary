@@ -7,6 +7,7 @@
 tableE8_new(
   df_prev = read_prev(),
   year = 2024,
+  inferCC = TRUE,
   path_csv = tempfile(fileext = ".csv")
 )
 }
@@ -14,6 +15,8 @@ tableE8_new(
 \item{df_prev}{The isolate based data object}
 
 \item{year}{the year to filter}
+
+\item{inferCC}{should CCs be inferred from SPA}
 
 \item{path_csv}{path to the output csv file}
 }

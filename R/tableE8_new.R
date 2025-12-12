@@ -5,12 +5,14 @@
 ##'
 ##' @param df_prev The isolate based data object
 ##' @param year the year to filter
+##' @param inferCC should CCs be inferred from SPA
 ##' @param path_csv path to the output csv file
 ##' @import data.table
 ##' @return A path to a csv file
 ##' @export
 tableE8_new <- function(df_prev = read_prev(),
                         year = 2024,
+                        inferCC = TRUE,
                         path_csv = tempfile(fileext = ".csv")) {
 
     ## filter by year

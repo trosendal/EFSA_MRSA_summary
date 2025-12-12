@@ -26,6 +26,7 @@ Collate:
     'read_data.R'
     'figure1.R'
     'figure2.R'
+    'figure3.R'
     'table1_2.R'
     'tableE1_E2.R'
     'tableE3_E4.R'
