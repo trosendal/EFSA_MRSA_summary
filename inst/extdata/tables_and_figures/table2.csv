@@ -1,21 +1,22 @@
 "spa-type";"Year";"Animals (N)";"Total_animal";"Food (N)";"Total_food"
 "t1430";2024;"";0;"Meat from turkey(5)";5
 "t1430";2023;"";0;"Meat from pig(5)";5
-"t127";2024;"";0;"Crustaceans(3)";3
+"t127";2024;"";0;"Crustaceans(5), Meat from broilers (Gallus gallus)(1), Meat from turkey(2)";8
 "t127";2023;"";0;"Meat from pig(1)";1
+"t002";2024;"";0;"Meat from broilers (Gallus gallus)(2), Meat from turkey(1)";3
 "t002";2023;"";0;"Meat from bovine animals(4)";4
-"t008";2024;"";0;"Crustaceans(2)";2
+"t008";2024;"";0;"Crustaceans(3)";3
 "t008";2023;"";0;"Meat from bovine animals(1), Meat from pig(1)";2
-"t001";2024;"";0;"Meat from broilers (Gallus gallus)(1), Meat from turkey(1)";2
-"t045";2024;"";0;"Meat from broilers (Gallus gallus)(1), Meat from turkey(1)";2
+"t10204";2024;"";0;"Meat from turkey(1)";1
 "t10204";2023;"Pigs(1)";1;"";0
+"t330";2024;"";0;"Meat from broilers (Gallus gallus)(2)";2
 "t1419";2023;"";0;"Meat from pig(1)";1
 "t1422";2024;"";0;"Meat from turkey(1)";1
-"t149";2024;"";0;"Meat from broilers (Gallus gallus)(1)";1
 "t177";2024;"Cattle (bovine animals)(1)";1;"";0
 "t20072";2023;"";0;"Meat from pig(1)";1
-"t022";2024;"";0;"Meat from broilers (Gallus gallus)(1)";1
+"t223";2024;"";0;"Meat from broilers (Gallus gallus)(1)";1
+"t309";2024;"";0;"Crustaceans(1)";1
 "t3512";2023;"";0;"Meat from pig(1)";1
 "t693";2023;"";0;"Meat from pig(1)";1
+"t8425";2024;"";0;"Meat from turkey(1)";1
 "t899";2023;"";0;"Meat from pig(1)";1
-"t9338";2024;"";0;"Meat from broilers (Gallus gallus)(1)";1

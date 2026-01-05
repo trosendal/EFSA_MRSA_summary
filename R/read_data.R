@@ -4,7 +4,7 @@
 ##'
 ##' @return A path
 prev_file <- function() {
-    system.file("extdata/prevalence MRSA all data.xlsx",
+    system.file("extdata/MRSA all data.xlsx",
                 package = "EFSAMRSAsummary")
 }
 
