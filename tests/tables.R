@@ -75,6 +75,13 @@ stopifnot(
         readLines(system.file("extdata/tables_and_figures/MRSA_AnnexE_tableE8.csv",
                               package = "EFSAMRSAsummary"))))
 
+## Table E8 new
+stopifnot(
+    identical(
+        readLines(EFSAMRSAsummary::tableE8_new()),
+        readLines(system.file("extdata/tables_and_figures/tab8_new.csv",
+                              package = "EFSAMRSAsummary"))))
+
 ## Table E9
 stopifnot(
     identical(

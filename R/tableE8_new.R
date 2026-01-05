@@ -51,6 +51,7 @@ tableE8_new <- function(df_prev = read_prev(),
                        c("Category", "Country", "type", "samp_type", "SPA",
                          "n", "N", "ST", "CC", "CC_infer", "Host")]
     write.csv2(df_prev,
-               file = "output/tab8_new.csv",
+               file = path_csv,
                row.names = FALSE)
+    path_csv
 }
