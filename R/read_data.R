@@ -63,7 +63,7 @@ read_prev <- function(path = prev_file(),
     ## rows should be collapsed:
     df_prev$samplingID <- paste0(df_prev$REPYEAR,
                                  df_prev$MATRIX_C,
-                                 df_prev$SAMPUNIT,
+                                 df_prev$SAMPUNIT_C,
                                  df_prev$REPCOUNTRY,
                                  df_prev$SAMPAREA,
                                  df_prev$TOTUNITSTESTED,
@@ -223,12 +223,12 @@ read_AMR <- function(path = isolate_file(),
 
     ## In order to match the the samples between prev and AMR data
     df_AMR$samplingID <- paste0(df_AMR$repYear,
-                            df_AMR$matrix_C,
-                            df_AMR$sampUnitType,
-                            df_AMR$repCountry,
-                            df_AMR$sampArea,
-                            df_AMR$totUnitsTested,
-                            df_AMR$totUnitsPositive)
+                                df_AMR$matrix_C,
+                                df_AMR$sampUnitType_C,
+                                df_AMR$repCountry,
+                                df_AMR$sampArea,
+                                df_AMR$totUnitsTested,
+                                df_AMR$totUnitsPositive)
 
     ## confir data.table'ness on the object
     setDT(df_AMR)
