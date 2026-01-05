@@ -1,0 +1,81 @@
+"Category";"Country";"type";"samp_type";"SPA";"n";"N";"ST";"CC";"CC_infer";"Host"
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"1";1;325;"127";"1";"1";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"22";1;325;"223";"22";"22";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"45";1;325;"330";"45";"45";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"130";1;325;"843";NA;NA;NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"149";1;325;"2";"5";"5";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"398";2;325;"11";"398";"398";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"398";5;325;"34";"398";"398";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"398";2;325;"899";"398";"398";NA
+"food";"Austria";"Meat from broilers (Gallus gallus)";"food sample - meat";"9338";1;325;"330";"45";"45";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"1";1;173;"127";"1";"1";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"45";1;173;"8425";"45";"45";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"398";6;173;"34";"398";"398";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"398";1;173;"1255";"398";"398";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"398";5;173;"899";"398";"398";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"398";13;173;"11";"398";"398";NA
+"food";"Austria";"Meat from turkey";"food sample - meat";"5972";1;173;"11";"398";"398";NA
+"food";"Germany";"Crustaceans";NA;"8";2;226;NA;"8";"8";"CA/HA"
+"food";"Germany";"Crustaceans";NA;"45";1;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"127";3;226;NA;"1";"1";"LA"
+"food";"Germany";"Crustaceans";NA;"189";2;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"304";6;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"376";1;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"1309";1;226;"672";NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"1849";1;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"5229";1;226;NA;NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"8588";1;226;NA;"398";"398";NA
+"food";"Germany";"Crustaceans";NA;"21860";1;226;"1930";NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"21897";1;226;"1930";NA;NA;NA
+"food";"Germany";"Crustaceans";NA;"22059";1;226;"1232";"398";"398";NA
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"11";16;405;NA;"398";"398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"34";50;405;NA;"398";"398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"34";1;386;NA;"398";"398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"779";1;405;NA;"398";"398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"899";2;405;NA;"CC1/CC398";"CC1/CC398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"899";1;286;NA;"398";"398";"LA"
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"1344";2;405;NA;"398";"398";NA
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"4132";1;405;NA;"398";"398";NA
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"12314";1;405;"398";"398";"398";NA
+"food";"Germany";"Meat from broilers (Gallus gallus)";NA;"21298";1;405;NA;"398";"398";NA
+"food";"Germany";"Meat from turkey";NA;"11";27;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"11";5;355;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"34";123;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"34";23;355;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"693";1;400;NA;NA;NA;"LA"
+"food";"Germany";"Meat from turkey";NA;"899";26;400;NA;"CC1/CC398";"CC1/CC398";"LA"
+"food";"Germany";"Meat from turkey";NA;"899";16;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"899";2;355;NA;"CC1/CC398";"CC1/CC398";"LA"
+"food";"Germany";"Meat from turkey";NA;"899";4;355;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"1255";1;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"1422";1;400;NA;"692";"692";"LA"
+"food";"Germany";"Meat from turkey";NA;"1430";4;400;NA;"1";"1";"LA"
+"food";"Germany";"Meat from turkey";NA;"1430";1;355;NA;"1";"1";"LA"
+"food";"Germany";"Meat from turkey";NA;"1451";1;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"3841";6;400;NA;NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"3841";1;400;"672";NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"3841";1;355;NA;NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"6575";3;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"8425";2;400;NA;NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"8425";1;355;NA;NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"8425";1;355;"45";NA;NA;NA
+"food";"Germany";"Meat from turkey";NA;"8588";2;400;NA;"398";"398";NA
+"food";"Germany";"Meat from turkey";NA;"8588";1;355;NA;"398";"398";NA
+"food";"Germany";"Meat from turkey";NA;"10485";2;400;NA;"398";"398";"LA"
+"food";"Germany";"Meat from turkey";NA;"21298";3;400;NA;"398";"398";NA
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"11";1;145;"6035";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"11";49;145;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"11";10;126;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"11";6;85;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"108";1;85;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"177";1;85;"9381";"1";"1";NA
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"588";1;126;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"1344";1;145;"398";"398";"398";NA
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"1451";2;145;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"1456";1;126;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"1606";1;145;"398";"398";"398";NA
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"2011";5;145;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"2346";1;145;"398";"398";"398";"LA"
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"2970";3;145;"398";"398";"398";NA
+"animal";"Belgium";"Cattle (bovine animals)";"animal sample - nasal swab";"3423";1;145;"398";"398";"398";"LA"
+"animal";"Germany";"Gallus gallus (fowl)";NA;"34";3;261;NA;"398";"398";"LA"
