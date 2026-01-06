@@ -3,76 +3,54 @@
 ##' Produce Annex Table 8: Methicillin-resistant Staphylococcus aureus
 ##' spa-type characterization, 2024.
 ##'
-##' @param df_AMR The isolate based data object
+##' @param df_prev The isolate based data object
 ##' @param year the year to filter
+##' @param inferCC should CCs be inferred from SPA
 ##' @param path_csv path to the output csv file
 ##' @import data.table
 ##' @return A path to a csv file
 ##' @export
-tableE8 <- function(df_AMR = read_AMR(),
+tableE8 <- function(df_prev = read_prev(),
                     year = 2024,
+                    inferCC = TRUE,
                     path_csv = tempfile(fileext = ".csv")) {
-    stopifnot(identical(length(year), 1L))
-    subdf <- df_AMR[df_AMR$repYear == year & !is.na(df_AMR$T), ]
-    ## Helper to fix unique values in data.table
-    collapse_unique <- function(x) {
-        x <- unique(x[!is.na(x) & x != ""])
-        if (length(x)) paste(x, collapse = ", ") else ""
+
+    ## filter by year
+    df_prev <- df_prev[as.numeric(REPYEAR) == year, ]
+
+    ## inference of CC or not
+    if (isTRUE(inferCC)) {
+        df_prev$CC <- df_prev$CC_infer
     }
-    subdf$spatype <- subdf$T
-    setDT(subdf)
-    iso <- subdf[, .(
-        mecA_any = any(mecA == TRUE, na.rm = TRUE),
-        mecC_any = any(mecC == TRUE, na.rm = TRUE),
-        ST       = collapse_unique(ST),
-        CC       = collapse_unique(CC),
-        iCC      = collapse_unique(CC_infer),
-        iST      = collapse_unique(ST_infer),
-        host     = ifelse(is.na(host_association[1]), "", host_association[1])
-    ), by = .(speciesType, repCountry, matrix_L1,
-              sampUnitType, spatype, LABISOLCODE)]
-    ##
-    tab <- iso[, .(
-        n_iso   = uniqueN(LABISOLCODE), # number of isolates
-        mecA_any = any(mecA_any),
-        mecC_any = any(mecC_any),
-        ST       = collapse_unique(ST),
-        CC       = collapse_unique(CC),
-        iCC      = collapse_unique(iCC),
-        iST      = collapse_unique(iST),
-        host     = host[1]
-    ), by = .(Category = speciesType,
-              Country  = repCountry,
-              AnimalFoodType = matrix_L1,
-              SampleType     = sampUnitType,
-              `spa-type`     = spatype)]
-    tab[, N := sum(n_iso), by = .(Category, Country, AnimalFoodType, SampleType)]
-    tab[, `No. of isolates ` := paste0(n_iso, "/", N)]
-    tab[, `PVL status/ IEC genes` := "-"]
-    tab[, `mec-gene` := fifelse(mecA_any & mecC_any, "mecA, mecC",
-                                fifelse(mecA_any & !mecC_any, "mecA",
-                                        fifelse(!mecA_any & mecC_any, "mecC", "-mecA, -mecC")))]
-    tab[, `LA, CA or HA` := host]
-    setnames(tab, c("iCC","iST"), c("Inferred CC","Inferred ST/CC & type"))
-    tab <- tab[order(tab$Category,
-                     tab$Country,
-                     tab$AnimalFoodType,
-                     tab$SampleType,
-                     tab$n_iso,
-                     tab$"spa-type", decreasing = TRUE), ]
-    tab1_dt <- tab[, .(
-        Category, Country,
-        `Animal/food type` = AnimalFoodType,
-        `Sample type/ unit` = SampleType,
-        `No. of isolates `,
-        `spa-type`,
-        `PVL status/ IEC genes`,
-        ST, CC, `mec-gene`,
-        `Inferred CC`,
-        `LA, CA or HA`,
-        `Inferred ST/CC & type`
-    )]
-    write.csv2(tab1_dt,
+
+    ## Aggregate by samplingID
+    df_prev <- df_prev[!is.na(T) &
+                       PROGSAMPSTRATEGY != "Suspect sampling" &
+                       !(SAMPCONTEXT %in% c("Clinical investigations",
+                                            "Control and eradication programmes",
+                                            "Outbreak investigation")),
+    {
+        n <- as.numeric(UNITSPOSITIVE)
+        stopifnot(all(!is.na(n)))
+        .(n = n,
+          N = as.numeric(TOTUNITSTESTED)[1],
+          year = REPYEAR,
+          ST = ST,
+          CC = CC,
+          CC_infer = CC_infer,
+          ST_infer = ST_infer,
+          Host = host_association(T))
+    }, by = .(samplingID,
+              SPA = T,
+              Category = SPECIESTYPE,
+              type = MATRIX_L1,
+              samp_type = SAMPTYPE,
+              Country = REPCOUNTRY)
+    ]
+    df_prev <- df_prev[order(-Category, Country, type, samp_type, as.numeric(SPA)),
+                       c("Category", "Country", "type", "samp_type", "SPA",
+                         "n", "N", "ST", "CC", "CC_infer", "Host")]
+    write.csv2(df_prev,
                file = path_csv,
                row.names = FALSE)
     path_csv

@@ -5,15 +5,18 @@
 \title{tableE8}
 \usage{
 tableE8(
-  df_AMR = read_AMR(),
+  df_prev = read_prev(),
   year = 2024,
+  inferCC = TRUE,
   path_csv = tempfile(fileext = ".csv")
 )
 }
 \arguments{
-\item{df_AMR}{The isolate based data object}
+\item{df_prev}{The isolate based data object}
 
 \item{year}{the year to filter}
+
+\item{inferCC}{should CCs be inferred from SPA}
 
 \item{path_csv}{path to the output csv file}
 }
