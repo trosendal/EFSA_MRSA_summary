@@ -20,12 +20,12 @@ figure2 <- function(df_prev = prev_by_samplingID(),
                            type = matrix,
                            country = country,
                            desc = matrix_txt,
-                           unit = SAMPUNIT)][n > 0]
+                           unit = SAMPUNIT)]
     tab1 <- tab1[order(type, -year, country, desc, unit)]
     tabgraph <- tab1[, .(N = sum(N),
                          n = sum(n),
                          p = sum(n)/sum(N)),
-                     by = .(Food = type, country, year)]
+                     by = .(Food = type, country, year)][n > 0]
     tabgraph <- tabgraph[N > 10, ]
     ## order of foods in graph
     foods <- tabgraph[, .(N = sum(N)), by = .(Food)][order(-N), Food]
