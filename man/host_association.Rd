@@ -4,14 +4,16 @@
 \alias{host_association}
 \title{host_association}
 \usage{
-host_association(spa)
+host_association(spa, explain = FALSE)
 }
 \arguments{
 \item{spa}{The spa type}
+
+\item{explain}{Spit out an explanation of the classification scheme}
 }
 \value{
 A vector of the host association
 }
 \description{
-estimate the host association of the SPA type
+Estimate the host association of the SPA type
 }

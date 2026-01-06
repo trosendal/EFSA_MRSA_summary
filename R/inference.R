@@ -161,12 +161,13 @@ AntibioticClass <- function(ab) {
 
 ##' host_association
 ##'
-##' estimate the host association of the SPA type
+##' Estimate the host association of the SPA type
 ##'
 ##' @param spa The spa type
+##' @param explain Spit out an explanation of the classification scheme
 ##' @export
 ##' @return A vector of the host association
-host_association <- function(spa) {
+host_association <- function(spa, explain = FALSE) {
     tl <- c("2" = "HA",
             "8" = "CA/HA",
             "9" = "CA/HA",
@@ -214,5 +215,9 @@ host_association <- function(spa) {
             "19248" = "LA",
             "20072" = "HA",
             "21217" = "LA")
-    tl[spa]
+    if (isFALSE(explain)) return(tl[spa])
+    levels <- unique(tl)
+    cat("\n\n", paste0(sapply(levels, function(x) {
+        paste0("The following SPA types were classified as: ", x, " : ", paste(names(tl[tl == x]), collapse = ", "))
+    }), collapse = "\n"), "\n\n", sep = "")
 }
