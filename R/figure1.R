@@ -20,7 +20,7 @@ figure1 <- function(df_prev = prev_by_samplingID(),
                            type = matrix,
                            country = country,
                            desc = matrix_txt,
-                           unit = SAMPUNIT)]
+                           unit = SAMPUNIT)][n > 0]
     tab1 <- tab1[order(type, -year, country, desc, unit)]
     tabgraph <- tab1[, .(N = sum(N),
                          n = sum(n),
@@ -63,7 +63,7 @@ figure1 <- function(df_prev = prev_by_samplingID(),
                             tabgraph$year, ")")
     mat <- mat[, seq(ncol(mat), 1)]
 
-    par(mar = c(8, 11, 0, 6))
+    par(mar = c(8, 11, 0, 8))
     cols <- c("#409fff", "#ffb740")
     bp <- barplot(mat,
                   horiz = TRUE,

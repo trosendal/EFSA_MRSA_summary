@@ -12,14 +12,15 @@ figure2 <- function(df_prev = prev_by_samplingID(),
     nonfood <- c("Dogs", "Felidae", "Solipeds, domestic")
     tab1 <- df_prev[year %in% years &
                     source == "animal" &
-                    ## !(SAMPCONTEXT %in% c("Clinical investigations", "Outbreak investigation")) &
+                    !(SAMPCONTEXT %in% c("Clinical investigations",
+                                         "Outbreak investigation")) &
                     !(matrix %in% nonfood),
                     .(N = sum(N), n = sum(n), prop = sum(n) / sum (N)),
                     by = .(year = year,
                            type = matrix,
                            country = country,
                            desc = matrix_txt,
-                           unit = SAMPUNIT)]
+                           unit = SAMPUNIT)][n > 0]
     tab1 <- tab1[order(type, -year, country, desc, unit)]
     tabgraph <- tab1[, .(N = sum(N),
                          n = sum(n),
@@ -53,13 +54,13 @@ figure2 <- function(df_prev = prev_by_samplingID(),
                             ", ",
                             tabgraph$year, ")")
     mat <- mat[, seq(ncol(mat), 1)]
-    par(mar = c(8, 12, 0, 4))
+    par(mar = c(8, 12, 0, 6))
     cols <- c("#409fff", "#ffb740")
     bp <- barplot(mat,
                   horiz = TRUE,
                   col = cols,
                   las = 1,
-                  xlim = c(0, 3000),
+                  xlim = c(0, 600),
                   xlab = "No. of sample units tested")
     labels <- paste0(round(mat[2,]/mat[1,] * 100, 1),
                      "% (N=", mat[1,], ")")
